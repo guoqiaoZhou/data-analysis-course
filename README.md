@@ -37,26 +37,26 @@ tags: [课程索引, 数据分析, 因果推断]
 
 建立因果推断的数学直觉和统计基础。
 
-1. [[stage-01-foundation/01-causal-inference-basics/01-potential-outcomes/concept|潜在结果框架]] — 因果推断的数学基础
-2. [[stage-01-foundation/01-causal-inference-basics/02-randomized-experiments/concept|随机化实验原理]] — 黄金标准
-3. [[stage-01-foundation/01-causal-inference-basics/03-observational-challenges/concept|观察性数据的挑战]] — 混杂与选择偏误
-4. [[stage-01-foundation/01-causal-inference-basics/04-causation-vs-correlation/concept|因果 vs 相关]] — 本质区别
+1. [[curriculum/stage-01-foundation/01-causal-inference-basics/01-potential-outcomes/潜在结果框架|潜在结果框架]] — 因果推断的数学基础
+2. [[curriculum/stage-01-foundation/01-causal-inference-basics/02-randomized-experiments/随机化实验原理|随机化实验原理]] — 黄金标准
+3. [[curriculum/stage-01-foundation/01-causal-inference-basics/03-observational-challenges/观察性数据的挑战|观察性数据的挑战]] — 混杂与选择偏误
+4. [[curriculum/stage-01-foundation/01-causal-inference-basics/04-causation-vs-correlation/因果与相关的本质区别|因果 vs 相关]] — 本质区别
 5. 统计基础
-   - [[stage-01-foundation/02-statistical-basics/01-t-test/concept|t检验]]
-   - [[stage-01-foundation/02-statistical-basics/02-chi-square-test/concept|卡方检验]]
-   - [[stage-01-foundation/02-statistical-basics/03-bootstrap/concept|Bootstrap]]
-   - [[stage-01-foundation/02-statistical-basics/04-ols-regression/concept|OLS回归]]
-   - [[stage-01-foundation/02-statistical-basics/05-logistic-regression/concept|Logistic回归]]
-   - [[stage-01-foundation/02-statistical-basics/06-fixed-effects/concept|固定效应模型]]
-   - [[stage-01-foundation/02-statistical-basics/07-power-analysis/concept|检验力与样本量]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/03-bootstrap/Bootstrap重抽样方法|Bootstrap]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/06-fixed-effects/固定效应模型|固定效应模型]]
+   - [[curriculum/stage-01-foundation/02-statistical-basics/07-power-analysis/检验力分析与样本量计算|检验力与样本量]]
 6. AB实验全流程
-   - [[stage-01-foundation/03-ab-testing/01-experiment-design/concept|实验设计要素]]
-   - [[stage-01-foundation/03-ab-testing/02-randomization/concept|随机化与分流]]
-   - [[stage-01-foundation/03-ab-testing/03-pre-aa-check/concept|Pre-AA检验]]
-   - [[stage-01-foundation/03-ab-testing/04-cuped/concept|CUPED方差缩减]]
-   - [[stage-01-foundation/03-ab-testing/05-post-stratification/concept|后分层分析]]
-   - [[stage-01-foundation/03-ab-testing/06-multiple-testing/concept|多重检验问题]]
-   - [[stage-01-foundation/03-ab-testing/07-analysis-decision/concept|实验分析决策]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|实验设计要素]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化与分流]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED方差缩减]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/05-post-stratification/后分层分析|后分层分析]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/06-multiple-testing/多重检验问题|多重检验问题]]
+   - [[curriculum/stage-01-foundation/03-ab-testing/07-analysis-decision/实验分析决策框架|实验分析决策]]
 
 ### 第二阶段：方法进阶
 
@@ -64,68 +64,68 @@ tags: [课程索引, 数据分析, 因果推断]
 
 7. 因果推断进阶
    - PSM倾向得分匹配
-     - [[stage-02-advanced/04-causal-inference/01-psm/01-matching-methods/concept|匹配方法]]
-     - [[stage-02-advanced/04-causal-inference/01-psm/02-overlap-assumption/concept|重叠假设]]
-     - [[stage-02-advanced/04-causal-inference/01-psm/03-sensitivity-analysis/concept|敏感性分析]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/01-psm/01-matching-methods/PSM匹配方法|匹配方法]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/01-psm/02-overlap-assumption/重叠假设|重叠假设]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/01-psm/03-sensitivity-analysis/敏感性分析|敏感性分析]]
    - DID双重差分
-     - [[stage-02-advanced/04-causal-inference/02-did/01-parallel-trends/concept|平行趋势检验]]
-     - [[stage-02-advanced/04-causal-inference/02-did/02-event-study/concept|事件研究法]]
-     - [[stage-02-advanced/04-causal-inference/02-did/03-synthetic-control/concept|合成控制法]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/02-did/01-parallel-trends/DID平行趋势检验|平行趋势检验]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/02-did/02-event-study/事件研究法|事件研究法]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/02-did/03-synthetic-control/合成控制法|合成控制法]]
    - DML双重机器学习
-     - [[stage-02-advanced/04-causal-inference/03-dml/01-nuisance-estimation/concept|Nuisance函数估计]]
-     - [[stage-02-advanced/04-causal-inference/03-dml/02-cross-validation/concept|交叉验证策略]]
-     - [[stage-02-advanced/04-causal-inference/03-dml/03-high-dimensional/concept|高维场景]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/03-dml/01-nuisance-estimation/Nuisance函数估计|Nuisance函数估计]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/03-dml/02-cross-validation/交叉验证策略|交叉验证策略]]
+     - [[curriculum/stage-02-advanced/04-causal-inference/03-dml/03-high-dimensional/高维场景|高维场景]]
 8. 机器学习建模
-   - [[stage-02-advanced/05-ml-modeling/01-xgboost/concept|XGBoost]]
+   - [[curriculum/stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]
    - SHAP解释
-     - [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/concept|全局重要性]]
-     - [[stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/concept|局部解释]]
-     - [[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/concept|小提琴图]]
-   - [[stage-02-advanced/05-ml-modeling/03-ale-plots/concept|ALE图]]
-   - [[stage-02-advanced/05-ml-modeling/04-shap-interaction/concept|SHAP交互效应]]
-   - [[stage-02-advanced/05-ml-modeling/05-woe-iv/concept|WOE/IV分箱]]
-   - [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/concept|GBDT+LR]]
+     - [[curriculum/stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|全局重要性]]
+     - [[curriculum/stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/SHAP局部解释|局部解释]]
+     - [[curriculum/stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/SHAP小提琴图|小提琴图]]
+   - [[curriculum/stage-02-advanced/05-ml-modeling/03-ale-plots/ALE图|ALE图]]
+   - [[curriculum/stage-02-advanced/05-ml-modeling/04-shap-interaction/SHAP交互效应|SHAP交互效应]]
+   - [[curriculum/stage-02-advanced/05-ml-modeling/05-woe-iv/WOE-IV分箱|WOE/IV分箱]]
+   - [[curriculum/stage-02-advanced/05-ml-modeling/06-gbdt-lr/GBDT-LR|GBDT+LR]]
 9. 因果推断×机器学习交叉
    - 因果森林
-     - [[stage-02-advanced/06-causal-ml/01-causal-forest/01-splitting-criteria/concept|分裂准则]]
-     - [[stage-02-advanced/06-causal-ml/01-causal-forest/02-confidence-intervals/concept|置信区间]]
+     - [[curriculum/stage-02-advanced/06-causal-ml/01-causal-forest/01-splitting-criteria/因果森林分裂准则|分裂准则]]
+     - [[curriculum/stage-02-advanced/06-causal-ml/01-causal-forest/02-confidence-intervals/因果森林置信区间|置信区间]]
    - Meta-Learners
-     - [[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/concept|S-Learner]]
-     - [[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/concept|T-Learner]]
-     - [[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/concept|X-Learner]]
-     - [[stage-02-advanced/06-causal-ml/02-meta-learners/04-r-learner/concept|R-Learner]]
-   - [[stage-02-advanced/06-causal-ml/03-doubly-robust/concept|双重稳健学习]]
+     - [[curriculum/stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]
+     - [[curriculum/stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]]
+     - [[curriculum/stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]
+     - [[curriculum/stage-02-advanced/06-causal-ml/02-meta-learners/04-r-learner/R-Learner|R-Learner]]
+   - [[curriculum/stage-02-advanced/06-causal-ml/03-doubly-robust/双重稳健学习|双重稳健学习]]
 
 ### 第三阶段：实战整合
 
 将方法转化为业务价值和规范文档。
 
 10. 分析文档写作
-    - [[stage-03-practice/07-document-writing/01-pyramid-principle/concept|金字塔原理]]
-    - [[stage-03-practice/07-document-writing/02-conclusion-writing/concept|核心结论写作]]
-    - [[stage-03-practice/07-document-writing/03-methods-section/concept|方法说明写作]]
-    - [[stage-03-practice/07-document-writing/04-actionable-recommendations/concept|落地建议颗粒度]]
-    - [[stage-03-practice/07-document-writing/05-numeric-expression/concept|数字表达规范]]
-    - [[stage-03-practice/07-document-writing/06-limitations/concept|局限性声明]]
+    - [[curriculum/stage-03-practice/07-document-writing/01-pyramid-principle/金字塔原理|金字塔原理]]
+    - [[curriculum/stage-03-practice/07-document-writing/02-conclusion-writing/核心结论写作|核心结论写作]]
+    - [[curriculum/stage-03-practice/07-document-writing/03-methods-section/方法说明写作|方法说明写作]]
+    - [[curriculum/stage-03-practice/07-document-writing/04-actionable-recommendations/落地建议颗粒度|落地建议颗粒度]]
+    - [[curriculum/stage-03-practice/07-document-writing/05-numeric-expression/数字表达规范|数字表达规范]]
+    - [[curriculum/stage-03-practice/07-document-writing/06-limitations/局限性声明|局限性声明]]
 11. 业务场景实战
-    - [[stage-03-practice/08-business-scenarios/01-search-analysis/concept|搜索场景]]
-    - [[stage-03-practice/08-business-scenarios/02-recommendation-analysis/concept|推荐场景]]
-    - [[stage-03-practice/08-business-scenarios/03-marketing-analysis/concept|营销场景]]
-    - [[stage-03-practice/08-business-scenarios/04-growth-analysis/concept|用户增长]]
+    - [[curriculum/stage-03-practice/08-business-scenarios/01-search-analysis/搜索场景分析|搜索场景]]
+    - [[curriculum/stage-03-practice/08-business-scenarios/02-recommendation-analysis/推荐场景分析|推荐场景]]
+    - [[curriculum/stage-03-practice/08-business-scenarios/03-marketing-analysis/营销场景分析|营销场景]]
+    - [[curriculum/stage-03-practice/08-business-scenarios/04-growth-analysis/用户增长分析|用户增长]]
 12. 工具与工程
-    - [[stage-03-practice/09-tools-engineering/01-python-ecosystem/concept|Python生态]]
-    - [[stage-03-practice/09-tools-engineering/02-r-ecosystem/concept|R生态]]
-    - [[stage-03-practice/09-tools-engineering/03-experiment-platform/concept|实验平台]]
-    - [[stage-03-practice/09-tools-engineering/04-reproducibility/concept|可复现性]]
+    - [[curriculum/stage-03-practice/09-tools-engineering/01-python-ecosystem/Python因果推断生态|Python生态]]
+    - [[curriculum/stage-03-practice/09-tools-engineering/02-r-ecosystem/R因果推断生态|R生态]]
+    - [[curriculum/stage-03-practice/09-tools-engineering/03-experiment-platform/实验平台搭建思路|实验平台]]
+    - [[curriculum/stage-03-practice/09-tools-engineering/04-reproducibility/分析可复现性|可复现性]]
 
 ---
 
 ## 附录
 
-- [[appendix/01-math-refresher/concept|数学基础速查]]
-- [[appendix/02-code-templates/concept|代码模板库]]
-- [[appendix/03-datasets/concept|案例数据集]]
-- [[appendix/04-resources/concept|推荐资源清单]]
+- [[curriculum/appendix/01-math-refresher/数学基础速查|数学基础速查]]
+- [[curriculum/appendix/02-code-templates/代码模板库|代码模板库]]
+- [[curriculum/appendix/03-datasets/案例数据集|案例数据集]]
+- [[curriculum/appendix/04-resources/推荐资源清单|推荐资源清单]]
 
 ---
 
