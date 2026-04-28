@@ -87,4 +87,4 @@ $$f(x) = \phi_0 + \sum_{j=1}^{M} \phi_j(x)$$
 
 *课程阶段：stage-02-advanced（机器学习建模 → SHAP解释）*
 *前置知识：SHAP全局重要性、XGBoost预测原理*
-*关联概念：[[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/concept|SHAP小提琴图]]、反事实解释、LIME、力图可视化*
+*关联概念：[[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/SHAP小提琴图|SHAP小提琴图]]、反事实解释、LIME、力图可视化*

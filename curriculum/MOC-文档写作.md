@@ -1,12 +1,12 @@
 # MOC-文档写作
 
 ## 核心概念
-- [[stage-03-practice/07-document-writing/01-pyramid-principle/concept|金字塔原理]] — 结构化表达方法
-- [[stage-03-practice/07-document-writing/02-conclusion-writing/concept|结论写作]] — 核心结论提炼
-- [[stage-03-practice/07-document-writing/03-methods-section/concept|方法说明]] — 可信度建立
-- [[stage-03-practice/07-document-writing/04-actionable-recommendations/concept|落地建议]] — 可执行建议
-- [[stage-03-practice/07-document-writing/05-numeric-expression/concept|数字表达]] — 数据呈现规范
-- [[stage-03-practice/07-document-writing/06-limitations/concept|局限性]] — 有效性边界声明
+- [[stage-03-practice/07-document-writing/01-pyramid-principle/金字塔原理|金字塔原理]] — 结构化表达方法
+- [[stage-03-practice/07-document-writing/02-conclusion-writing/核心结论写作|结论写作]] — 核心结论提炼
+- [[stage-03-practice/07-document-writing/03-methods-section/方法说明写作|方法说明]] — 可信度建立
+- [[stage-03-practice/07-document-writing/04-actionable-recommendations/落地建议颗粒度|落地建议]] — 可执行建议
+- [[stage-03-practice/07-document-writing/05-numeric-expression/数字表达规范|数字表达]] — 数据呈现规范
+- [[stage-03-practice/07-document-writing/06-limitations/局限性声明|局限性]] — 有效性边界声明
 
 ## 概念关系
 - 金字塔原理 → 结论写作（结构基础）
@@ -16,5 +16,5 @@
 - 局限性 ← 方法说明（边界声明）
 
 ## 学习路径
-1. [[stage-03-practice/07-document-writing/01-pyramid-principle/concept|金字塔原理]] → 2. [[stage-03-practice/07-document-writing/02-conclusion-writing/concept|结论写作]] → 3. [[stage-03-practice/07-document-writing/03-methods-section/concept|方法说明]]
-4. [[stage-03-practice/07-document-writing/04-actionable-recommendations/concept|落地建议]] → 5. [[stage-03-practice/07-document-writing/05-numeric-expression/concept|数字表达]] → 6. [[stage-03-practice/07-document-writing/06-limitations/concept|局限性]]
+1. [[stage-03-practice/07-document-writing/01-pyramid-principle/金字塔原理|金字塔原理]] → 2. [[stage-03-practice/07-document-writing/02-conclusion-writing/核心结论写作|结论写作]] → 3. [[stage-03-practice/07-document-writing/03-methods-section/方法说明写作|方法说明]]
+4. [[stage-03-practice/07-document-writing/04-actionable-recommendations/落地建议颗粒度|落地建议]] → 5. [[stage-03-practice/07-document-writing/05-numeric-expression/数字表达规范|数字表达]] → 6. [[stage-03-practice/07-document-writing/06-limitations/局限性声明|局限性]]

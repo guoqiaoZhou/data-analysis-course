@@ -93,5 +93,5 @@ Pre-AA检验（Pre-Analysis Assumption Check）是在实验结果分析前，验
 ---
 
 *课程阶段：基础夯实*
-*前置知识：假设检验、[[stage-01-foundation/02-statistical-basics/02-chi-square-test/concept|卡方检验]]*
-*关联概念：[[stage-01-foundation/03-ab-testing/02-randomization/concept|随机化与分流]], [[stage-01-foundation/03-ab-testing/04-cuped/concept|CUPED]]*
+*前置知识：假设检验、[[stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]]*
+*关联概念：[[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化与分流]], [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED]]*

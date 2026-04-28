@@ -98,4 +98,4 @@ IV 值的经验判断标准：
 
 *课程阶段：stage-02-advanced / 05-ml-modeling*
 *前置知识：逻辑回归、特征工程基础、二分类评估指标（KS、AUC）*
-*关联概念：评分卡、[[stage-01-foundation/02-statistical-basics/02-chi-square-test/concept|卡方检验]]、分箱策略、目标编码、特征筛选*
+*关联概念：评分卡、[[stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]]、分箱策略、目标编码、特征筛选*

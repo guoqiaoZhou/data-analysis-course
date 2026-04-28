@@ -1,7 +1,7 @@
 ---
 title: 数据分析进阶课程
 course-version: 1.0
-course-author: 为国乔妻子定制
+
 tags: [课程索引, 数据分析, 因果推断]
 ---
 
@@ -140,9 +140,9 @@ tags: [课程索引, 数据分析, 因果推断]
 
 ### VS Code 用户
 
-1. 用 VS Code 打开 `projects/data-analysis/`
+1. 用 VS Code 打开 `data-analysis-course/`
 2. 安装 Markdown 插件和 Python 插件
-3. `code/` 目录下的 `.py` 文件可直接运行
+3. `curriculum/**/code/` 目录下的 `.py` 文件可直接运行
 4. 使用 Jupyter 插件运行交互式代码
 
 ### 学习节奏建议

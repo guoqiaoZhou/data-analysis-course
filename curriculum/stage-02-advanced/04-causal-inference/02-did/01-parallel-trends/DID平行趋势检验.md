@@ -132,4 +132,4 @@ $$Y_{it} = \alpha + \beta D_{it} + \gamma_i + \lambda_t + \epsilon_{it}$$
 
 *课程阶段：因果推断进阶*
 *前置知识：双重差分法（DID）基础、面板数据回归*
-*关联概念：[[stage-02-advanced/04-causal-inference/02-did/02-event-study/concept|事件研究法]]（用于动态效应估计）、合成控制法（平行趋势不成立时的替代方案）、固定效应模型*
+*关联概念：[[stage-02-advanced/04-causal-inference/02-did/02-event-study/事件研究法|事件研究法]]（用于动态效应估计）、合成控制法（平行趋势不成立时的替代方案）、固定效应模型*

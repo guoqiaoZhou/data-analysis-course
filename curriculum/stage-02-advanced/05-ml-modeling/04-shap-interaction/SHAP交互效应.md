@@ -92,5 +92,5 @@ $$\phi_{i,j} = \sum_{S \subseteq N \setminus \{i,j\}} \frac{|S|!(|N|-|S|-2)!}{2(
 ---
 
 *课程阶段：stage-02-advanced / 05-ml-modeling*
-*前置知识：SHAP 基础、Shapley 值、树模型（[[stage-02-advanced/05-ml-modeling/01-xgboost/concept|XGBoost]]/LightGBM）*
+*前置知识：SHAP 基础、Shapley 值、树模型（[[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]/LightGBM）*
 *关联概念：ALE 图、特征工程、模型公平性、因果推断*

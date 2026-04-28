@@ -1,13 +1,13 @@
 # MOC-AB实验
 
 ## 核心概念
-- [[stage-01-foundation/03-ab-testing/01-experiment-design/concept|实验设计]] — 设计要素详解
-- [[stage-01-foundation/03-ab-testing/02-randomization/concept|随机化]] — 分流与正交分层
-- [[stage-01-foundation/03-ab-testing/03-pre-aa-check/concept|Pre-AA检验]] — 实验前平衡检查
-- [[stage-01-foundation/03-ab-testing/04-cuped/concept|CUPED]] — 方差缩减方法
-- [[stage-01-foundation/03-ab-testing/05-post-stratification/concept|后分层]] — 协变量分层加权
-- [[stage-01-foundation/03-ab-testing/06-multiple-testing/concept|多重检验]] — FWER与FDR控制
-- [[stage-01-foundation/03-ab-testing/07-analysis-decision/concept|分析决策]] — 实验结果决策框架
+- [[stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|实验设计]] — 设计要素详解
+- [[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化]] — 分流与正交分层
+- [[stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]] — 实验前平衡检查
+- [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED]] — 方差缩减方法
+- [[stage-01-foundation/03-ab-testing/05-post-stratification/后分层分析|后分层]] — 协变量分层加权
+- [[stage-01-foundation/03-ab-testing/06-multiple-testing/多重检验问题|多重检验]] — FWER与FDR控制
+- [[stage-01-foundation/03-ab-testing/07-analysis-decision/实验分析决策框架|分析决策]] — 实验结果决策框架
 
 ## 概念关系
 - 实验设计 → 随机化 → Pre-AA检验（流程链）
@@ -17,5 +17,5 @@
 - Pre-AA检验 ← 随机化（验证工具）
 
 ## 学习路径
-1. [[stage-01-foundation/03-ab-testing/01-experiment-design/concept|实验设计]] → 2. [[stage-01-foundation/03-ab-testing/02-randomization/concept|随机化]] → 3. [[stage-01-foundation/03-ab-testing/03-pre-aa-check/concept|Pre-AA检验]]
-4. [[stage-01-foundation/03-ab-testing/04-cuped/concept|CUPED]] → 5. [[stage-01-foundation/03-ab-testing/05-post-stratification/concept|后分层]] → 6. [[stage-01-foundation/03-ab-testing/06-multiple-testing/concept|多重检验]] → 7. [[stage-01-foundation/03-ab-testing/07-analysis-decision/concept|分析决策]]
+1. [[stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|实验设计]] → 2. [[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化]] → 3. [[stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]]
+4. [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED]] → 5. [[stage-01-foundation/03-ab-testing/05-post-stratification/后分层分析|后分层]] → 6. [[stage-01-foundation/03-ab-testing/06-multiple-testing/多重检验问题|多重检验]] → 7. [[stage-01-foundation/03-ab-testing/07-analysis-decision/实验分析决策框架|分析决策]]

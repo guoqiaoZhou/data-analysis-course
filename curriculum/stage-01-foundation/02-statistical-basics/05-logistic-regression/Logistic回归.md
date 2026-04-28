@@ -124,4 +124,4 @@ logit(P) = -2.1 + 0.8×领券 + 1.2×加购 + 0.5×首小时浏览3次+ + 0.3×i
 
 *课程阶段：基础夯实*
 *前置知识：概率、 odds、指数函数*
-*关联概念：[[stage-01-foundation/02-statistical-basics/04-ols-regression/concept|OLS回归]], [[stage-02-advanced/05-ml-modeling/01-xgboost/concept|XGBoost]]*
+*关联概念：[[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]], [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]*

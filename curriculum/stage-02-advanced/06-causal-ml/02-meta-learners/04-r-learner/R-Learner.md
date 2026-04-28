@@ -139,5 +139,5 @@ R-Learner 的理论保证要求 nuisance 模型收敛更快。实践中，nuisan
 ---
 
 *课程阶段：stage-02-advanced*
-*前置知识：[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/concept|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/concept|T-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/concept|X-Learner]]、倾向得分、半参数统计*
-*关联概念：[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/concept|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/concept|T-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/concept|X-Learner]]、因果森林、双重稳健学习*
+*前置知识：[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]、倾向得分、半参数统计*
+*关联概念：[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]、因果森林、双重稳健学习*
