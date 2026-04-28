@@ -38,3 +38,11 @@
 1. [[stage-01-foundation/01-causal-inference-basics/01-potential-outcomes/潜在结果框架|潜在结果框架]] → 2. [[stage-01-foundation/01-causal-inference-basics/02-randomized-experiments/随机化实验原理|随机化实验]] → 3. [[stage-01-foundation/01-causal-inference-basics/03-observational-challenges/观察性数据的挑战|观察性数据挑战]]
 4. [[stage-02-advanced/04-causal-inference/01-psm/01-matching-methods/PSM匹配方法|PSM匹配]] → 5. [[stage-02-advanced/04-causal-inference/02-did/01-parallel-trends/DID平行趋势检验|平行趋势]] → 6. [[stage-02-advanced/04-causal-inference/02-did/02-event-study/事件研究法|事件研究法]] → 7. [[stage-02-advanced/04-causal-inference/02-did/03-synthetic-control/合成控制法|合成控制]]
 8. [[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]] → 9. [[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]] → 10. [[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]] → 11. [[stage-02-advanced/06-causal-ml/02-meta-learners/04-r-learner/R-Learner|R-Learner]]
+
+## 相关主题
+
+- [[MOC-统计基础|统计基础（统计工具）]]
+- [[MOC-AB实验|AB实验（实验方法）]]
+- [[MOC-机器学习建模|机器学习建模（ML辅助因果）]]
+- [[MOC-阶段一-基础夯实|阶段一-基础夯实（阶段索引）]]
+- [[MOC-阶段二-方法进阶|阶段二-方法进阶（阶段索引）]]

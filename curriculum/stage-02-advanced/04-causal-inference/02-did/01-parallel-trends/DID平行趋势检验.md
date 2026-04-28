@@ -175,3 +175,36 @@ $$Y_{it} = \alpha + \beta D_{it} + \gamma_i + \lambda_t + \epsilon_{it}$$
 *课程阶段：因果推断进阶*
 *前置知识：双重差分法（DID）基础、面板数据回归*
 *关联概念：[[stage-02-advanced/04-causal-inference/02-did/02-event-study/事件研究法|事件研究法]]（用于动态效应估计）、合成控制法（平行趋势不成立时的替代方案）、固定效应模型*
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/01-causal-inference-basics/01-potential-outcomes/潜在结果框架|潜在结果框架]]
+- [[stage-01-foundation/02-statistical-basics/06-fixed-effects/固定效应模型|固定效应模型]]
+- [[stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|AB实验设计要素]]
+
+### 后续应用
+- [[stage-02-advanced/04-causal-inference/02-did/02-event-study/事件研究法|事件研究法]]
+- [[stage-02-advanced/04-causal-inference/02-did/03-synthetic-control/合成控制法|合成控制法]]
+
+### 平行概念
+- [[stage-02-advanced/04-causal-inference/01-psm/01-matching-methods/PSM匹配方法|PSM（截面数据场景）]]
+- [[stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|AB实验（随机化场景）]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+import numpy as np
+import statsmodels.formula.api as smf
+import pandas as pd
+
+# 经典 2x2 DID
+# Y_it = alpha + beta*Post_t + gamma*Treat_i + delta*(Post_t*Treat_i) + eps
+# delta 即为 DID 估计量
+print("DID 估计量 = (Y_treat_post - Y_treat_pre) - (Y_ctrl_post - Y_ctrl_pre)")
+```
+
+> 💻 **完整可运行代码**：见上级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。

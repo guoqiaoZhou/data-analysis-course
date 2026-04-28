@@ -155,3 +155,43 @@ $$(Y(1), Y(0)) \perp D \,|\, e(X)$$
 ### 经验4：倾向得分模型不是"越复杂越好"——逻辑回归往往够用
 
 某外卖平台用XGBoost估计倾向得分，认为"非线性模型更准确"。但匹配后发现实验组和对照组的倾向得分分布几乎无重叠（共同支持域极小）——复杂模型过度拟合了处理组和对照组的差异，导致大量样本无法匹配。**教训：倾向得分模型首选逻辑回归或浅层树模型。复杂模型容易"完美分离"处理组和对照组，反而破坏重叠假设。**
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/01-causal-inference-basics/01-potential-outcomes/潜在结果框架|潜在结果框架]]
+- [[stage-01-foundation/01-causal-inference-basics/03-observational-challenges/观察性数据的挑战|观察性数据的挑战]]
+- [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]]
+
+### 后续应用
+- [[stage-02-advanced/04-causal-inference/01-psm/02-overlap-assumption/重叠假设|重叠假设]]
+- [[stage-02-advanced/04-causal-inference/01-psm/03-sensitivity-analysis/敏感性分析|敏感性分析]]
+- [[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]
+
+### 平行概念
+- [[stage-02-advanced/04-causal-inference/02-did/01-parallel-trends/DID平行趋势检验|DID（面板数据场景）]]
+- [[stage-02-advanced/04-causal-inference/03-dml/01-nuisance-estimation/Nuisance函数估计|DML（高维场景）]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import NearestNeighbors
+import numpy as np
+
+np.random.seed(42)
+n = 1000
+X = np.random.normal(0, 1, (n, 3))
+propensity = LogisticRegression().fit(X, D).predict_proba(X)[:, 1]
+
+# 1:1 最近邻匹配
+nn = NearestNeighbors(n_neighbors=1)
+nn.fit(propensity[D==0].reshape(-1, 1))
+distances, indices = nn.kneighbors(propensity[D==1].reshape(-1, 1))
+print(f"匹配后 ATT 估计: ...")
+```
+
+> 💻 **完整可运行代码**：见上级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。

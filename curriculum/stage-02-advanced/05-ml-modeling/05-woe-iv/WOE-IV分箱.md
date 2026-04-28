@@ -112,6 +112,27 @@ IV 值的经验判断标准：
 
 ---
 
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+import numpy as np
+
+# WOE = ln(P(X|Y=1) / P(X|Y=0))
+# IV = sum((P(X|Y=1) - P(X|Y=0)) * WOE)
+# IV < 0.02: 无预测力; 0.02-0.1: 弱; 0.1-0.3: 中等; >0.3: 强
+print("WOE 将分箱转换为对数几率，IV 衡量整体预测力")
+```
+
+> 💻 **完整可运行代码**：见同级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：stage-02-advanced / 05-ml-modeling*
 *前置知识：逻辑回归、特征工程基础、二分类评估指标（KS、AUC）*
 *关联概念：评分卡、[[stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]]、分箱策略、目标编码、特征筛选*

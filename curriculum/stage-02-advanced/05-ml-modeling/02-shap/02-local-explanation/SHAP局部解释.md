@@ -97,6 +97,34 @@ $$f(x) = \phi_0 + \sum_{j=1}^{M} \phi_j(x)$$
 
 ---
 
+
+## 概念关联
+### 前置知识
+- [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|SHAP全局重要性]]
+
+### 后续应用
+- [[stage-02-advanced/05-ml-modeling/04-shap-interaction/SHAP交互效应|SHAP交互效应]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+# SHAP 近似：特征排列法
+# 对每个特征，随机打乱其值并观察预测变化
+baseline = model.predict_proba(X)[:, 1]
+shap_values = []
+for j in range(X.shape[1]):
+    X_perm = X.copy()
+    np.random.shuffle(X_perm[:, j])
+    permuted = model.predict_proba(X_perm)[:, 1]
+    shap_values.append(np.mean(np.abs(permuted - baseline)))
+print(f"SHAP 全局重要性: {shap_values}")
+```
+
+> 💻 **完整可运行代码**：见上级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：stage-02-advanced（机器学习建模 → SHAP解释）*
 *前置知识：SHAP全局重要性、XGBoost预测原理*
 *关联概念：[[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/SHAP小提琴图|SHAP小提琴图]]、反事实解释、LIME、力图可视化*

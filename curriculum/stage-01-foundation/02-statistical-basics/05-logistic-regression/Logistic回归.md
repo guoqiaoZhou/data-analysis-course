@@ -134,6 +134,53 @@ logit(P) = -2.1 + 0.8×领券 + 1.2×加购 + 0.5×首小时浏览3次+ + 0.3×i
 
 ---
 
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]]
+
+### 后续应用
+- [[stage-02-advanced/05-ml-modeling/05-woe-iv/WOE-IV分箱|WOE/IV分箱]]
+- [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/GBDT-LR|GBDT+LR]]
+
+### 平行概念
+- [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归（连续结果场景）]]
+## 代码示例
+
+```python
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix, accuracy_score
+
+np.random.seed(42)
+
+# 生成二分类数据
+x = np.random.normal(loc=5, scale=2, size=200).reshape(-1, 1)
+logit = -3.0 + 0.8 * x.flatten()
+prob = 1 / (1 + np.exp(-logit))
+y = (np.random.uniform(size=200) < prob).astype(int)
+
+# 拟合 Logistic 回归
+model = LogisticRegression(solver='lbfgs')
+model.fit(x, y)
+
+beta0 = model.intercept_[0]
+beta1 = model.coef_[0][0]
+print(f"估计模型：logit(p) = {beta0:.3f} + {beta1:.3f} * x")
+print(f"优势比 OR = exp({beta1:.3f}) = {np.exp(beta1):.3f}")
+
+# 混淆矩阵
+y_pred = model.predict(x)
+cm = confusion_matrix(y, y_pred)
+print(f"准确率 = {accuracy_score(y, y_pred):.3f}")
+print("混淆矩阵：")
+print(cm)
+```
+
+> 💻 **完整可运行代码**：见同目录下 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：基础夯实*
 *前置知识：概率、 odds、指数函数*
 *关联概念：[[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]], [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]*

@@ -42,3 +42,10 @@
 1. [[stage-01-foundation/01-causal-inference-basics/01-potential-outcomes/潜在结果框架|潜在结果框架]] → 2. [[stage-01-foundation/01-causal-inference-basics/02-randomized-experiments/随机化实验原理|随机化实验]] → 3. [[stage-01-foundation/01-causal-inference-basics/03-observational-challenges/观察性数据的挑战|观察性数据挑战]] → 4. [[stage-01-foundation/01-causal-inference-basics/04-causation-vs-correlation/因果与相关的本质区别|因果vs相关]]
 5. [[stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]] → 6. [[stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]] → 7. [[stage-01-foundation/02-statistical-basics/03-bootstrap/Bootstrap重抽样方法|Bootstrap]] → 8. [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]]
 9. [[stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|实验设计]] → 10. [[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化]] → 11. [[stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]] → 12. [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED]]
+
+## 相关主题
+
+- [[MOC-阶段二-方法进阶|阶段二-方法进阶（进阶学习路径）]]
+- [[MOC-因果推断|因果推断（主题深入）]]
+- [[MOC-统计基础|统计基础（主题深入）]]
+- [[MOC-AB实验|AB实验（主题深入）]]

@@ -97,6 +97,28 @@ $$\hat{f}_{j,ALE}(x) = \int_{x_{min}}^{x} \mathbb{E}\left[ \frac{\partial f(x_j,
 
 ---
 
+
+## 概念关联
+### 前置知识
+- [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]
+- [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|SHAP全局重要性]]
+
+### 平行概念
+- [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|SHAP（特征重要性 vs 边际效应）]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+# ALE 计算：在每个分箱内，计算特征值从低分位点到高分位点的预测变化
+# ALE 避免了 PDP 在相关特征下的偏差
+print("ALE(x) = 在局部窗口内，特征值变化导致的预测变化累积")
+```
+
+> 💻 **完整可运行代码**：见同级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：stage-02-advanced / 05-ml-modeling*
 *前置知识：PDP（部分依赖图）、模型可解释性基础、特征相关性*
 *关联概念：SHAP、ICE 图、特征重要性、因果推断*

@@ -115,6 +115,41 @@ GBDT 的 One-Hot 输出维度通常为 树数 × 平均叶子数。500 棵树、
 
 ---
 
+
+## 概念关联
+### 前置知识
+- [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]
+- [[stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归]]
+
+### 平行概念
+- [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost（纯树模型）]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import OneHotEncoder
+
+# GBDT 生成叶子节点特征，LR 在叶子特征上训练
+gbdt = GradientBoostingClassifier(n_estimators=50, max_depth=3)
+gbdt.fit(X_train, y_train)
+
+# 提取叶子索引作为新特征
+leaves = gbdt.apply(X_train)[:, :, 0]  # (n_samples, n_trees)
+encoder = OneHotEncoder(sparse_output=False)
+leaf_features = encoder.fit_transform(leaves)
+
+lr = LogisticRegression(max_iter=1000)
+lr.fit(leaf_features, y_train)
+print("GBDT+LR: 结合非线性特征变换与线性模型的可解释性")
+```
+
+> 💻 **完整可运行代码**：见同级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：stage-02-advanced / 05-ml-modeling*
 *前置知识：GBDT/[[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]/LightGBM、逻辑回归、One-Hot 编码、特征交叉*
 *关联概念：FM、DeepFM、Wide & Deep、CTR 预估、特征哈希、在线学习*

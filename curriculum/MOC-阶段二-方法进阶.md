@@ -51,3 +51,10 @@
 4. [[stage-02-advanced/04-causal-inference/02-did/01-parallel-trends/DID平行趋势检验|平行趋势]] → 5. [[stage-02-advanced/04-causal-inference/02-did/02-event-study/事件研究法|事件研究法]] → 6. [[stage-02-advanced/04-causal-inference/02-did/03-synthetic-control/合成控制法|合成控制]]
 7. [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]] → 8. [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|SHAP全局]] → 9. [[stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/SHAP局部解释|SHAP局部]] → 10. [[stage-02-advanced/05-ml-modeling/04-shap-interaction/SHAP交互效应|SHAP交互]]
 11. [[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]] → 12. [[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]] → 13. [[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]] → 14. [[stage-02-advanced/06-causal-ml/02-meta-learners/04-r-learner/R-Learner|R-Learner]]
+
+## 相关主题
+
+- [[MOC-阶段一-基础夯实|阶段一-基础夯实（前置基础）]]
+- [[MOC-阶段三-实战整合|阶段三-实战整合（应用场景）]]
+- [[MOC-因果推断|因果推断（主题深入）]]
+- [[MOC-机器学习建模|机器学习建模（主题深入）]]

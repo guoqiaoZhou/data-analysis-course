@@ -107,3 +107,42 @@ Pre-AA检验（Pre-Analysis Assumption Check）是在实验结果分析前，验
 *课程阶段：基础夯实*
 *前置知识：假设检验、[[stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]]*
 *关联概念：[[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化与分流]], [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED]]*
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化与分流]]
+- [[stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]]
+
+### 后续应用
+- [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED方差缩减]]
+
+### 平行概念
+- [[stage-01-foundation/01-causal-inference-basics/03-observational-challenges/观察性数据的挑战|观察性数据的挑战（平衡检验逻辑）]]
+## 代码示例
+
+```python
+import numpy as np
+from scipy import stats
+
+np.random.seed(42)
+
+# AA 测试模拟
+def simulate_aa_test(n_per_group=5000, n_simulations=1000, alpha=0.05):
+    false_positive = 0
+    for _ in range(n_simulations):
+        a = np.random.normal(100, 20, n_per_group)
+        b = np.random.normal(100, 20, n_per_group)
+        _, p = stats.ttest_ind(a, b)
+        if p < alpha:
+            false_positive += 1
+    return false_positive / n_simulations
+
+# 平衡性检验（标准化差异）
+def standardized_difference(a, b):
+    return (b.mean() - a.mean()) / np.sqrt((a.var(ddof=1) + b.var(ddof=1)) / 2)
+```
+
+> 💻 **完整可运行代码**：见同目录下 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。

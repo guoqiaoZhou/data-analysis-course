@@ -119,6 +119,39 @@ XGBoost内置的`feature_importances_`基于增益或分裂次数，对高基数
 
 ---
 
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]]
+
+### 后续应用
+- [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|SHAP全局重要性]]
+- [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/GBDT-LR|GBDT+LR]]
+- [[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]
+- [[stage-02-advanced/04-causal-inference/03-dml/01-nuisance-estimation/Nuisance函数估计|DML]]
+
+### 平行概念
+- [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/GBDT-LR|GBDT+LR（可解释性增强版）]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+from sklearn.ensemble import GradientBoostingClassifier
+import numpy as np
+
+# 梯度提升核心：串行训练弱学习器，每棵新树拟合前序模型的残差
+model = GradientBoostingClassifier(n_estimators=100, max_depth=3, learning_rate=0.1)
+model.fit(X_train, y_train)
+print(f"特征重要性: {model.feature_importances_}")
+```
+
+> 💻 **完整可运行代码**：见同级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：stage-02-advanced（机器学习建模）*
 *前置知识：决策树、梯度下降、正则化、[[stage-02-advanced/04-causal-inference/03-dml/02-cross-validation/交叉验证策略|交叉验证]]*
 *关联概念：LightGBM、CatBoost、随机森林、SHAP（本阶段后续内容）*

@@ -19,3 +19,9 @@
 ## 学习路径
 1. [[stage-01-foundation/03-ab-testing/01-experiment-design/AB实验设计要素|实验设计]] → 2. [[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化]] → 3. [[stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]]
 4. [[stage-01-foundation/03-ab-testing/04-cuped/CUPED方差缩减|CUPED]] → 5. [[stage-01-foundation/03-ab-testing/05-post-stratification/后分层分析|后分层]] → 6. [[stage-01-foundation/03-ab-testing/06-multiple-testing/多重检验问题|多重检验]] → 7. [[stage-01-foundation/03-ab-testing/07-analysis-decision/实验分析决策框架|分析决策]]
+
+## 相关主题
+
+- [[MOC-因果推断|因果推断（理论基础）]]
+- [[MOC-统计基础|统计基础（检验工具）]]
+- [[MOC-阶段一-基础夯实|阶段一-基础夯实（阶段索引）]]

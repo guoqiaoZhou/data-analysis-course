@@ -20,3 +20,10 @@
 1. [[stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]] → 2. [[stage-01-foundation/02-statistical-basics/02-chi-square-test/卡方检验|卡方检验]] → 3. [[stage-01-foundation/02-statistical-basics/03-bootstrap/Bootstrap重抽样方法|Bootstrap]]
 4. [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]] → 5. [[stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归]] → 6. [[stage-01-foundation/02-statistical-basics/06-fixed-effects/固定效应模型|固定效应]]
 7. [[stage-01-foundation/02-statistical-basics/07-power-analysis/检验力分析与样本量计算|检验力分析]]（贯穿始终）
+
+## 相关主题
+
+- [[MOC-因果推断|因果推断（应用场景）]]
+- [[MOC-AB实验|AB实验（应用场景）]]
+- [[MOC-机器学习建模|机器学习建模（应用场景）]]
+- [[MOC-阶段一-基础夯实|阶段一-基础夯实（阶段索引）]]

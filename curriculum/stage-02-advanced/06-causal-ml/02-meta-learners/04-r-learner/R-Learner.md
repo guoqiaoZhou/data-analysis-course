@@ -153,3 +153,34 @@ R-Learner 的理论保证要求 nuisance 模型收敛更快。实践中，nuisan
 *课程阶段：stage-02-advanced*
 *前置知识：[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]、倾向得分、半参数统计*
 *关联概念：[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]、因果森林、双重稳健学习*
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]
+
+### 平行概念
+- [[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+from sklearn.ensemble import GradientBoostingRegressor
+
+# S-Learner: 单模型，T 作为特征
+s_learner = GradientBoostingRegressor().fit(np.column_stack([X, D]), Y)
+cate_s = s_learner.predict(np.column_stack([X, np.ones(n)])) -          s_learner.predict(np.column_stack([X, np.zeros(n)]))
+
+# T-Learner: 分别训练
+treat_model = GradientBoostingRegressor().fit(X[D==1], Y[D==1])
+ctrl_model = GradientBoostingRegressor().fit(X[D==0], Y[D==0])
+cate_t = treat_model.predict(X) - ctrl_model.predict(X)
+
+print("S-Learner 简单但可能偏误; T-Learner 无偏但方差大")
+```
+
+> 💻 **完整可运行代码**：见上级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+

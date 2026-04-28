@@ -21,3 +21,9 @@
 1. [[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]] → 2. [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/SHAP全局重要性|SHAP全局]] → 3. [[stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/SHAP局部解释|SHAP局部]]
 4. [[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/SHAP小提琴图|SHAP小提琴图]] → 5. [[stage-02-advanced/05-ml-modeling/03-ale-plots/ALE图|ALE图]] → 6. [[stage-02-advanced/05-ml-modeling/04-shap-interaction/SHAP交互效应|SHAP交互]]
 7. [[stage-02-advanced/05-ml-modeling/05-woe-iv/WOE-IV分箱|WOE/IV]] → 8. [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/GBDT-LR|GBDT+LR]]
+
+## 相关主题
+
+- [[MOC-因果推断|因果推断（因果ML）]]
+- [[MOC-统计基础|统计基础（统计基础）]]
+- [[MOC-阶段二-方法进阶|阶段二-方法进阶（阶段索引）]]

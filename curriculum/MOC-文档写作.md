@@ -18,3 +18,8 @@
 ## 学习路径
 1. [[stage-03-practice/07-document-writing/01-pyramid-principle/金字塔原理|金字塔原理]] → 2. [[stage-03-practice/07-document-writing/02-conclusion-writing/核心结论写作|结论写作]] → 3. [[stage-03-practice/07-document-writing/03-methods-section/方法说明写作|方法说明]]
 4. [[stage-03-practice/07-document-writing/04-actionable-recommendations/落地建议颗粒度|落地建议]] → 5. [[stage-03-practice/07-document-writing/05-numeric-expression/数字表达规范|数字表达]] → 6. [[stage-03-practice/07-document-writing/06-limitations/局限性声明|局限性]]
+
+## 相关主题
+
+- [[MOC-业务场景|业务场景（写作素材）]]
+- [[MOC-阶段三-实战整合|阶段三-实战整合（阶段索引）]]

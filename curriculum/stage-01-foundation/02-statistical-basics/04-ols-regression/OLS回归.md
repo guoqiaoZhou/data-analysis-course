@@ -120,3 +120,48 @@ LTV = 50 + 3.2×首月访问 + 0.8×首月下单 + 15×优惠券使用 + ε
 ### 经验4：异方差不是"小问题"，White标准误是必做项
 
 滴滴某实验离线分析用OLS估计处理效应，残差图显示"处理组残差方差是对照组的3倍"（异方差）。普通标准误下p=0.04（"显著"），White稳健标准误下p=0.11（不显著）。若按普通标准误上报，可能导致错误全量。**规范：任何OLS回归，默认使用稳健标准误（HC3）。在Python的statsmodels中，添加cov_type='HC3'只需一个参数，但能避免大量错误决策。**
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]]
+
+### 后续应用
+- [[stage-01-foundation/02-statistical-basics/06-fixed-effects/固定效应模型|固定效应模型]]
+- [[stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归]]
+- [[stage-02-advanced/04-causal-inference/01-psm/01-matching-methods/PSM匹配方法|PSM匹配方法]]
+
+### 平行概念
+- [[stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归（二分类场景）]]
+## 代码示例
+
+```python
+import numpy as np
+from scipy import stats
+
+np.random.seed(42)
+
+# 生成数据：y = 2 + 3.5*x + ε
+x = np.random.uniform(0, 10, size=100)
+y = 2.0 + 3.5 * x + np.random.normal(0, 5, size=100)
+
+# OLS 估计
+slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
+print(f"估计模型：y = {intercept:.3f} + {slope:.3f} * x")
+print(f"R² = {r_value**2:.3f}, p = {p_value:.4f}")
+
+# 残差
+y_pred = intercept + slope * x
+residuals = y - y_pred
+print(f"残差均值 = {residuals.mean():.6f}（应接近 0）")
+```
+
+> 💻 **完整可运行代码**：见同目录下 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
+*课程阶段：基础夯实*
+*前置知识：概率、期望、方差*
+*关联概念：[[stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]], [[stage-01-foundation/02-statistical-basics/05-logistic-regression/Logistic回归|Logistic回归]]*

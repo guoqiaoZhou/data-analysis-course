@@ -105,6 +105,24 @@ $$\phi_{i,j} = \sum_{S \subseteq N \setminus \{i,j\}} \frac{|S|!(|N|-|S|-2)!}{2(
 
 ---
 
+
+## 概念关联
+### 前置知识
+- [[stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/SHAP局部解释|SHAP局部解释]]
+## 代码示例
+
+以下代码演示该知识点的核心概念。
+
+```python
+# SHAP 交互值 = 联合特征的重要性 - 各自独立重要性
+# 若 model 对 (X1, X2) 的预测显著依赖于两者组合，则交互值高
+print("交互值高 → 特征间存在协同/拮抗效应")
+```
+
+> 💻 **完整可运行代码**：见同级目录 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
+
+---
+
 *课程阶段：stage-02-advanced / 05-ml-modeling*
 *前置知识：SHAP 基础、Shapley 值、树模型（[[stage-02-advanced/05-ml-modeling/01-xgboost/XGBoost|XGBoost]]/LightGBM）*
 *关联概念：ALE 图、特征工程、模型公平性、因果推断*

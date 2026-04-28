@@ -139,3 +139,37 @@ $$Var(\tilde{Y}) = Var(Y)(1 - \rho^2)$$
 ### 经验4：新用户实验别指望CUPED——分层随机化才是正道
 
 某外卖平台做"注册流程简化"实验，新用户无历史GMV数据，CUPED无法使用。团队尝试用"注册渠道"作为替代协变量，但不同渠道的用户质量差异太大，协变量与结果相关性不稳定。**建议：新用户实验默认采用分层随机化（按注册渠道、设备类型、地域分层），而非CUPED。分层在设计阶段解决不平衡问题，CUPED在分析阶段降噪，两者互补但不替代。**
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]]
+- [[stage-01-foundation/02-statistical-basics/04-ols-regression/OLS回归|OLS回归]]
+
+### 后续应用
+- [[stage-01-foundation/03-ab-testing/05-post-stratification/后分层分析|后分层分析]]
+
+### 平行概念
+- [[stage-01-foundation/03-ab-testing/05-post-stratification/后分层分析|后分层分析（另一种纠偏方法）]]
+## 代码示例
+
+```python
+import numpy as np
+
+np.random.seed(42)
+
+# CUPED 调整
+def cuped_adjust(y, x, theta=None):
+    if theta is None:
+        theta = np.cov(y, x)[0, 1] / np.var(x)
+    y_cuped = y - theta * (x - x.mean())
+    return y_cuped, theta
+
+# 方差缩减百分比
+def variance_reduction(y, y_cuped):
+    return (np.var(y, ddof=1) - np.var(y_cuped, ddof=1)) / np.var(y, ddof=1) * 100
+```
+
+> 💻 **完整可运行代码**：见同目录下 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。

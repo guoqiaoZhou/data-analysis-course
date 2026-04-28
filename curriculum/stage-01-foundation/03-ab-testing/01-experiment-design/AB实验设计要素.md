@@ -130,3 +130,48 @@ $$E[Y(1)] - E[Y(0)] = E[Y|D=1] - E[Y|D=0]$$
 ### 经验4：分层随机化的"层"不是越多越好——我们曾分了20层，结果每层样本量不足
 
 某B端功能按"行业×规模×城市"分了20层，每层内随机化。结果核心层（如"餐饮-大型-一线城市"）样本充足，但边缘层（如"零售-小型-三线城市"）每组仅20个商家，统计功效几乎为零。**规则：分层数应控制在"核心协变量数×2-3"以内，且每层处理组和对照组至少各100个样本。分层是为了平衡，不是为了展示分类能力。**
+
+---
+
+
+## 概念关联
+### 前置知识
+- [[stage-01-foundation/01-causal-inference-basics/02-randomized-experiments/随机化实验原理|随机化实验原理]]
+- [[stage-01-foundation/02-statistical-basics/01-t-test/t检验|t检验]]
+- [[stage-01-foundation/02-statistical-basics/07-power-analysis/检验力分析与样本量计算|检验力分析与样本量计算]]
+
+### 后续应用
+- [[stage-01-foundation/03-ab-testing/02-randomization/随机化与分流|随机化与分流]]
+- [[stage-01-foundation/03-ab-testing/03-pre-aa-check/Pre-AA检验|Pre-AA检验]]
+
+### 平行概念
+- [[stage-02-advanced/04-causal-inference/02-did/01-parallel-trends/DID平行趋势检验|DID（观察性替代方案）]]
+## 代码示例
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+
+np.random.seed(42)
+
+# MDE 与样本量计算
+def sample_size_per_group(baseline_mean, mde, std, alpha=0.05, power=0.8):
+    z_alpha = stats.norm.ppf(1 - alpha / 2)
+    z_beta = stats.norm.ppf(power)
+    n = 2 * (z_alpha + z_beta) ** 2 * (std ** 2) / (mde ** 2)
+    return int(np.ceil(n))
+
+# Power 曲线模拟
+def simulate_power_curve(n_per_group=500, baseline_mean=100.0, std=20.0):
+    effect_list = np.linspace(0, 10, 21)
+    powers = []
+    for effect in effect_list:
+        ctrl = np.random.normal(baseline_mean, std, n_per_group)
+        treat = np.random.normal(baseline_mean + effect, std, n_per_group)
+        _, p = stats.ttest_ind(ctrl, treat)
+        powers.append(p < 0.05)
+    return effect_list, powers
+```
+
+> 💻 **完整可运行代码**：见同目录下 `code/simulation.py`，包含可视化与完整输出。建议在 VS Code / PyCharm 中打开运行，或命令行执行 `python simulation.py`。
