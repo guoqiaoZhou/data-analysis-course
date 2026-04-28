@@ -109,4 +109,4 @@ $$\mathbb{E}[(Y - \hat{g}_{-k}(X))(D - \hat{m}_{-k}(X)) | \mathcal{D}_{-k}] \app
 
 *课程阶段：stage-02-advanced（进阶因果推断）*
 *前置知识：DML基本原理、机器学习模型训练流程、偏差-方差权衡*
-*关联概念：Nuisance函数估计、Bootstrap、时间序列分析、模型选择*
+*关联概念：Nuisance函数估计、[[03-bootstrap|Bootstrap]]、时间序列分析、模型选择*

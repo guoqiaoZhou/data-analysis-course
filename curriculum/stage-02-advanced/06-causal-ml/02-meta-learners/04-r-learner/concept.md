@@ -139,5 +139,5 @@ R-Learner 的理论保证要求 nuisance 模型收敛更快。实践中，nuisan
 ---
 
 *课程阶段：stage-02-advanced*
-*前置知识：S-Learner、T-Learner、X-Learner、倾向得分、半参数统计*
-*关联概念：S-Learner、T-Learner、X-Learner、因果森林、双重稳健学习*
+*前置知识：[[01-s-learner|S-Learner]]、[[02-t-learner|T-Learner]]、[[03-x-learner|X-Learner]]、倾向得分、半参数统计*
+*关联概念：[[01-s-learner|S-Learner]]、[[02-t-learner|T-Learner]]、[[03-x-learner|X-Learner]]、因果森林、双重稳健学习*

@@ -102,5 +102,5 @@ GBDT 的 One-Hot 输出维度通常为 树数 × 平均叶子数。500 棵树、
 ---
 
 *课程阶段：stage-02-advanced / 05-ml-modeling*
-*前置知识：GBDT/XGBoost/LightGBM、逻辑回归、One-Hot 编码、特征交叉*
+*前置知识：GBDT/[[01-xgboost|XGBoost]]/LightGBM、逻辑回归、One-Hot 编码、特征交叉*
 *关联概念：FM、DeepFM、Wide & Deep、CTR 预估、特征哈希、在线学习*

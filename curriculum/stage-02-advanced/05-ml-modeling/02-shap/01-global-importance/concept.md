@@ -92,5 +92,5 @@ $$\phi_j(f) = \sum_{S \subseteq N \setminus \{j\}} \frac{|S|!(|N|-|S|-1)!}{|N|!}
 ---
 
 *课程阶段：stage-02-advanced（机器学习建模 → SHAP解释）*
-*前置知识：XGBoost、特征重要性、博弈论基础概念*
-*关联概念：SHAP局部解释、SHAP小提琴图、Permutation Importance、XGBoost内置重要性*
+*前置知识：[[01-xgboost|XGBoost]]、特征重要性、博弈论基础概念*
+*关联概念：SHAP局部解释、[[03-violin-plot|SHAP小提琴图]]、Permutation Importance、XGBoost内置重要性*

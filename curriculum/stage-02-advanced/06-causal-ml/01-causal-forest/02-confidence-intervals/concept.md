@@ -128,5 +128,5 @@ $$\hat{\tau}(X_i) \pm z_{\alpha/2} \cdot \sqrt{\widehat{Var}(\hat{\tau}(X_i))}$$
 ---
 
 *课程阶段：stage-02-advanced*
-*前置知识：因果森林分裂准则、中心极限定理、自助法（Bootstrap）*
-*关联概念：因果森林分裂准则、S-Learner、T-Learner、双重稳健学习*
+*前置知识：因果森林分裂准则、中心极限定理、自助法（[[03-bootstrap|Bootstrap]]）*
+*关联概念：因果森林分裂准则、[[01-s-learner|S-Learner]]、[[02-t-learner|T-Learner]]、双重稳健学习*

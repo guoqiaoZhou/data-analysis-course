@@ -106,5 +106,5 @@ XGBoost内置的`feature_importances_`基于增益或分裂次数，对高基数
 ---
 
 *课程阶段：stage-02-advanced（机器学习建模）*
-*前置知识：决策树、梯度下降、正则化、交叉验证*
+*前置知识：决策树、梯度下降、正则化、[[02-cross-validation|交叉验证]]*
 *关联概念：LightGBM、CatBoost、随机森林、SHAP（本阶段后续内容）*

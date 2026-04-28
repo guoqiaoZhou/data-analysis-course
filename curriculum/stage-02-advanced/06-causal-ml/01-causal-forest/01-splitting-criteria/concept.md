@@ -126,5 +126,5 @@ $$\Delta_{\tau} \propto (\hat{\tau}_L - \hat{\tau}_R)^2 \cdot \frac{n_L \cdot n_
 ---
 
 *课程阶段：stage-02-advanced*
-*前置知识：随机森林、潜在结果框架、条件平均处理效应（CATE）*
-*关联概念：因果森林置信区间、S-Learner、T-Learner、X-Learner、双重稳健学习*
+*前置知识：随机森林、[[01-potential-outcomes|潜在结果框架]]、条件平均处理效应（CATE）*
+*关联概念：[[02-confidence-intervals|因果森林置信区间]]、[[01-s-learner|S-Learner]]、[[02-t-learner|T-Learner]]、[[03-x-learner|X-Learner]]、双重稳健学习*

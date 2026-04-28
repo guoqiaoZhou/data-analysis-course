@@ -131,5 +131,5 @@ $$\hat{\tau}_{DR} = \frac{1}{n} \sum_{i=1}^n \left[ \hat{\mu}_1(X_i) - \hat{\mu}
 ---
 
 *课程阶段：stage-02-advanced*
-*前置知识：潜在结果框架、倾向得分、逆概率加权（IPW）、结果回归（G-Computation）*
-*关联概念：因果森林、S-Learner、T-Learner、X-Learner、R-Learner*
+*前置知识：[[01-potential-outcomes|潜在结果框架]]、倾向得分、逆概率加权（IPW）、结果回归（G-Computation）*
+*关联概念：因果森林、[[01-s-learner|S-Learner]]、[[02-t-learner|T-Learner]]、[[03-x-learner|X-Learner]]、[[04-r-learner|R-Learner]]*
