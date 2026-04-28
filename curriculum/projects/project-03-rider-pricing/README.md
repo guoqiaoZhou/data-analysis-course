@@ -4,6 +4,30 @@
 
 ---
 
+## 📖 阅读路径
+
+### ⏱️ 快速了解（5分钟）
+如果你只想了解这个项目的流程和结论：
+1. **README.md**（本文件）— 项目背景、STAR框架、核心结论
+2. **report-template/pricing-report-template.md** — 标准定价策略报告长什么样
+
+### 🧠 理解思路（30分钟）
+如果你想理解"为什么这么做"的分析思路：
+1. **notebooks/01-situation-task.ipynb** — 业务背景、问题定义、为什么不能用AB实验
+2. **notebooks/02-action-design.ipynb** — 方法选择：为什么用因果森林不用PSM？
+3. **notebooks/06-result.ipynb** — 结论、洞察、定价策略建议
+
+### 🛠️ 动手实践（3-5小时）
+如果你想跟着做一遍：
+按顺序执行 notebooks/01 → 02 → 03 → 04 → 05 → 06，每个都有TODO标记引导你完成
+
+### 🔍 深入验证（可选）
+做完后对照：
+- **solution/reference-solution.md** — 参考答案
+- **rubric/scoring-rubric.md** — 自评标准
+
+---
+
 ## 一、项目背景（Situation）
 
 ### 1.1 业务场景
