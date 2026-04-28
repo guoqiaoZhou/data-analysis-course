@@ -1,0 +1,85 @@
+# 参考资源：潜在结果框架
+
+## 经典论文
+
+1. **Rubin, D. B. (1974).** "Estimating causal effects of treatments in randomized and nonrandomized studies." *Journal of Educational Psychology*, 66(5), 688-701.
+   - 潜在结果框架的开创性论文
+   - 必读
+
+2. **Holland, P. W. (1986).** "Statistics and causal inference." *Journal of the American Statistical Association*, 81(396), 945-960.
+   - 因果推断的统计基础
+   - 清晰阐述"因果推断的根本问题"
+
+3. **Imbens, G. W., & Rubin, D. B. (2015).** *Causal Inference for Statistics, Social, and Biomedical Sciences: An Introduction*.
+   - 因果推断的权威教材
+   - 从基础到高级方法，数学严谨
+
+## 教材与课程
+
+| 资源 | 难度 | 说明 |
+|------|------|------|
+| *Causal Inference: The Mixtape* (Cunningham) | 入门 | 免费在线，R代码，通俗易懂 |
+| *Mostly Harmless Econometrics* (Angrist & Pischke) | 中级 | 计量经济学视角，强调识别策略 |
+| *Causal Inference: What If* (Hernán & Robins) | 中级 | 流行病学视角，免费在线 |
+| Coursera: *A Crash Course in Causality* (Penn) | 入门 | 短期系统入门，有Python代码 |
+
+## 在线资源
+
+- **dagitty.net**: DAG 绘制与检验工具
+- **Causal Inference Lab**: 交互式学习平台
+- **Mixtape Sessions**: Cunningham 的配套视频
+
+## 代码资源
+
+### Python
+
+```python
+# 因果推断主要库
+# dowhy: 微软开源，端到端因果推断
+# causalml: Uber开源，因果机器学习
+# econml: 微软开源，因果推断+机器学习
+
+pip install dowhy causalml econml
+```
+
+### R
+
+```r
+# 因果推断主要包
+# MatchIt: 匹配方法
+# cem:  coarsened exact matching
+# randomizr: 随机化设计
+
+install.packages(c("MatchIt", "cem", "randomizr"))
+```
+
+## 扩展阅读
+
+### SUTVA 的放松
+
+- **网络干扰（Interference）**: 当个体处理影响他人结果时
+  - 资源：Aronow & Samii (2017), "Estimating average causal effects under general interference"
+  - 应用：社交网络、市场、教育 peer effects
+
+- **隐藏的处理版本（Hidden Variation of Treatment）**: 当处理不是单一版本时
+  - 例子：不同医生的"同一种手术"技术不同
+  - 资源：VanderWeele (2017), "On the promotion of human flourishing"
+
+### 因果推断的哲学基础
+
+- **Rubin vs Pearl 的框架对比**: 
+  - Rubin: 潜在结果，强调设计
+  - Pearl: DAG，强调结构
+  - 资源：Pearl (2009), *Causality*; Imbens (2020), "Potential Outcomes and DAGs"
+
+- **外部效度（External Validity）**: 实验结果能否推广
+  - 资源：Cole & Stuart (2010), "Generalizing evidence from randomized trials"
+
+## 下一章预习
+
+- [[02-randomized-experiments|随机化实验原理]]: 如何在实践中实现潜在结果框架
+- 思考：随机化为什么能解决"因果推断的根本问题"？
+
+---
+
+*维护约定：发现优质资源时更新此文件*
