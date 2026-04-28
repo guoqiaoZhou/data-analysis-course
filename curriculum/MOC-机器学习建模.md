@@ -1,14 +1,14 @@
 # MOC-机器学习建模
 
 ## 核心概念
-- [[01-xgboost|XGBoost]] — 梯度提升决策树
-- [[01-global-importance|SHAP全局]] — 全局特征重要性
-- [[02-local-explanation|SHAP局部]] — 单样本解释
-- [[03-violin-plot|SHAP小提琴图]] — SHAP分布可视化
-- [[03-ale-plots|ALE图]] — 累积局部效应
-- [[04-shap-interaction|SHAP交互]] — 特征交互效应
-- [[05-woe-iv|WOE/IV]] — 分箱与信息值
-- [[06-gbdt-lr|GBDT+LR]] — 自动特征交叉
+- [[stage-02-advanced/05-ml-modeling/01-xgboost/concept|XGBoost]] — 梯度提升决策树
+- [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/concept|SHAP全局]] — 全局特征重要性
+- [[stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/concept|SHAP局部]] — 单样本解释
+- [[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/concept|SHAP小提琴图]] — SHAP分布可视化
+- [[stage-02-advanced/05-ml-modeling/03-ale-plots/concept|ALE图]] — 累积局部效应
+- [[stage-02-advanced/05-ml-modeling/04-shap-interaction/concept|SHAP交互]] — 特征交互效应
+- [[stage-02-advanced/05-ml-modeling/05-woe-iv/concept|WOE/IV]] — 分箱与信息值
+- [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/concept|GBDT+LR]] — 自动特征交叉
 
 ## 概念关系
 - XGBoost → SHAP全局/局部/小提琴图（解释工具链）
@@ -18,6 +18,6 @@
 - GBDT+LR ← XGBoost（模型架构）
 
 ## 学习路径
-1. [[01-xgboost|XGBoost]] → 2. [[01-global-importance|SHAP全局]] → 3. [[02-local-explanation|SHAP局部]]
-4. [[03-violin-plot|SHAP小提琴图]] → 5. [[03-ale-plots|ALE图]] → 6. [[04-shap-interaction|SHAP交互]]
-7. [[05-woe-iv|WOE/IV]] → 8. [[06-gbdt-lr|GBDT+LR]]
+1. [[stage-02-advanced/05-ml-modeling/01-xgboost/concept|XGBoost]] → 2. [[stage-02-advanced/05-ml-modeling/02-shap/01-global-importance/concept|SHAP全局]] → 3. [[stage-02-advanced/05-ml-modeling/02-shap/02-local-explanation/concept|SHAP局部]]
+4. [[stage-02-advanced/05-ml-modeling/02-shap/03-violin-plot/concept|SHAP小提琴图]] → 5. [[stage-02-advanced/05-ml-modeling/03-ale-plots/concept|ALE图]] → 6. [[stage-02-advanced/05-ml-modeling/04-shap-interaction/concept|SHAP交互]]
+7. [[stage-02-advanced/05-ml-modeling/05-woe-iv/concept|WOE/IV]] → 8. [[stage-02-advanced/05-ml-modeling/06-gbdt-lr/concept|GBDT+LR]]
