@@ -1,0 +1,16 @@
+# Obsidian
+.obsidian/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Generated data (raw data is kept, processed is generated)
+curriculum/projects/project-02-app-experiment/data/processed/
+curriculum/projects/project-01-ecommerce-causal/data/processed/
+curriculum/projects/project-03-rider-pricing/data/processed/
+
+# Temporary files
+*.tmp
+*.log
