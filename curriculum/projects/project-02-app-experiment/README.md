@@ -44,6 +44,53 @@
 
 ---
 
+## 📖 阅读路径
+
+根据你的时间和目标，选择不同的阅读路径：
+
+### 🚀 快速了解（5分钟）
+只想了解这个项目是做什么的、结论是什么：
+1. **README.md**（本文档）— 项目背景、STAR框架、核心结论
+2. **report-template/experiment-report-template.md** — 标准实验报告结构，了解最终交付物
+
+### 🧠 理解思路（30分钟）
+想理解"为什么这么做"，但不需要动手：
+1. **notebooks/01-situation-task.ipynb** — 业务背景、问题定义、指标选择
+2. **notebooks/02-action-design.ipynb** — 实验设计、样本量计算、随机化方案
+3. **notebooks/06-result.ipynb** — 结论、洞察、业务建议
+
+### 🔧 动手实践（2-4小时）
+想跟着做一遍，建立实操能力：
+按顺序执行：
+1. **notebooks/01-situation-task.ipynb** — 理解业务问题
+2. **notebooks/02-action-design.ipynb** — 设计实验方案
+3. **notebooks/03-action-execution.ipynb** — 生成数据、执行AA检验
+4. **notebooks/04-action-analysis.ipynb** — 假设检验、多重检验校正
+5. **notebooks/05-action-iteration.ipynb** — CUPED优化、后分层分析
+6. **notebooks/06-result.ipynb** — 撰写结论
+
+### 🔍 深入验证（可选）
+做完后想对照答案、评估质量：
+1. **solution/reference-solution.md** — 参考答案，对照自己的分析
+2. **rubric/scoring-rubric.md** — 评分标准，自评或互评
+
+---
+
+## ⚠️ 失败路径警示
+
+本项目特别展示了以下错误做法的后果：
+
+| 错误做法 | 后果 | 在哪看到 |
+|---------|------|---------|
+| 跳过AA检验 | 分组本来就不平衡，结论不可信 | notebook 03 |
+| 忽略多重检验 | 3个指标都显著的概率是14%，不是5% | notebook 04 |
+| 实验中途peeking | 假阳性率从5%飙升到30%+ | notebook 05 |
+| 不看后分层 | 掩盖了"新用户有效、老用户无效"的重要信息 | notebook 05 |
+
+---
+
+---
+
 ## 🔍 5W2H分析
 
 | 维度 | 内容 |
