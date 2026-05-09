@@ -19,6 +19,37 @@ tags: [因果推断, 机器学习, Meta-Learner, R-Learner, 条件平均处理�
 
 你学过的[[stage-02-advanced/06-causal-ml/02-meta-learners/01-s-learner/S-Learner|S-Learner]]、[[stage-02-advanced/06-causal-ml/02-meta-learners/02-t-learner/T-Learner|T-Learner]]和[[stage-02-advanced/06-causal-ml/02-meta-learners/03-x-learner/X-Learner|X-Learner]]都依赖于对结果分布的建模，而R-Learner提供了一种"绕过结果分布、直接估计效应"的路径，理论上具有最优的渐近效率。
 
+## 反常识：R-Learner的"理论最优"在实践中可能是"过度工程"——nuisance模型比CATE模型更重要
+
+### 直觉误导
+> "R-Learner有半参数效率最优性，正交性容错nuisance误设，是Meta-Learner的终极形态。"
+
+### 真相揭露
+R-Learner的理论优势建立在nuisance模型（结果模型m(X)和倾向得分e(X)）收敛速度足够快（o(n^{-1/4})）的前提下。但实践中，nuisance模型往往比CATE模型更难估计——因为结果模型需要拟合完整的Y|X分布，而CATE模型只需要拟合处理效应τ(X)。如果nuisance模型欠拟合，R-Learner的"残差化"会放大噪声，正交性优势无法发挥。更隐蔽的问题是：交叉拟合将样本拆分为多份，nuisance模型训练数据减少，小样本下nuisance估计精度下降。大厂实践中，R-Learner很少作为生产环境的首选——其复杂度和调参成本只有在样本量>50万、有专门因果推断团队时才值得。
+
+### 与坑清单的桥接
+- [[../../../appendix/05-anti-patterns/数据分析师的100个坑.md|坑55：Meta-Learner选择拍脑袋]] — R-Learner不是第一选择，通常是"最后手段"
+- [[../../../appendix/05-anti-patterns/数据分析师的100个坑.md|坑40：忽略DML的模型误设风险]] — R-Learner的nuisance模型误设会破坏正交性
+- [[../../../appendix/05-anti-patterns/数据分析师的100个坑.md|坑39：DML样本量不够硬上]] — R-Learner需要大样本支持交叉拟合，小样本下不如S-Learner
+- **新增坑（待评估）**："nuisance模型弱于CATE模型"——R-Learner中nuisance模型用默认参数而CATE模型精心调参，导致正交性失效
+
+### 真实案例
+某内容平台用R-Learner估计创作者基金效果，nuisance模型用默认参数的LightGBM，CATE模型精心调参。结果R-Learner的表现反而不如X-Learner——因为nuisance的欠拟合破坏了正交性。后将nuisance模型换成更深树、更多迭代的配置，R-Learner才展现理论优势。另一个案例：某外卖平台通过模拟实验发现，3折交叉拟合是其数据量下的"甜蜜点"，5折因nuisance欠拟合导致CATE MSE反而上升。样本量>100万用5折，10-100万用3折，<10万用2折或退化为S-Learner。
+
+### 正确做法
+1. R-Learner是"最后手段"而非"第一选择"：S-Learner AUUC<0.6或样本量>50万时才考虑
+2. nuisance模型需要比CATE模型更强：更深的树、更多的迭代、更精细的特征工程
+3. 交叉拟合折数的选择是权衡：样本量>100万用5折，10-100万用3折，<10万用2折或不用
+4. 年度方法论审计时用R-Learner作为理论标杆跑对比，生产环境优先用X-Learner+LightGBM
+
+### 自检问题
+- 我的nuisance模型是否比CATE模型更强？是否用了更深的树、更多的迭代？
+- 样本量是否足够支持交叉拟合？折数选择是否经过模拟验证？
+- R-Learner是否是"第一选择"？S-Learner或X-Learner是否更适合当前场景？
+- nuisance模型是否欠拟合？残差中是否存在系统性噪声？
+
+---
+
 ## 基本原理
 
 R-Learner（Robinson Learner）是 Meta-Learner 框架中理论性质最优的实现。其核心思想来自半参数统计中的"Robinson 分解"——将处理效应估计转化为一个**去均值化的回归问题**，从而绕过对结果分布的完全建模，直接估计处理效应。
